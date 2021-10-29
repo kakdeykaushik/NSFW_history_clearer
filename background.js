@@ -1,10 +1,11 @@
+const FILE_NAME = "payload/names.txt";
+const MAX_RESULTS = 0; // it will retrieve as much as it can
+
 // Pulls NSFW keywords -> names
-var names = $.get("names.txt", {}, function (content) {
+const names = $.get(FILE_NAME, {}, function (content) {
   names = content.split("\n");
   names = names.map((name) => name.toLowerCase()).slice(0, -1);
 });
-
-const MAX_RESULTS = 0; // it will retrieve as much as it can
 
 // Listens to frontend(script.js) and behaves accordingly
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {

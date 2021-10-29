@@ -8,14 +8,12 @@ function frontFunction() {
     },
     (response) => {
       if (response.message === "success") {
-        const txt =
-          "NSFW deleted from recent history !<br>Now you are clean 😉";
-        document.getElementById("message").innerHTML = txt;
+        var txt = "NSFW deleted from recent history !<br>Now you are clean 😉";
       } else {
-        const txt = "Oops! Something went wrong.";
-        document.getElementById("message").innerHTML = txt;
+        var txt = "Oops! Something went wrong.";
         // send crash report using... response.error
       }
+      document.getElementById("message").innerHTML = txt;
     }
   );
 }
