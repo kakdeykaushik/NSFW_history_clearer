@@ -1,0 +1,25 @@
+{
+    "name": "NSFW History Clearer",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "payload/logo.png"
+    },
+    
+    "icons": {
+        "128": "payload/logo.png"
+    },
+
+    "background": {
+		"scripts": [
+            "payload/jquery-3.6.0.js",
+			"background.js"
+		],
+		"persistent": true
+	},
+
+    "permissions": [
+		"history"
+	]
+}
